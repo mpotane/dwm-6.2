@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true" };
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#bbbbbb", "#5e81ac", "#9e5177" },
+	[SchemeNorm] = { "#bbbbbb", "#39516f", "#9e5177" },
 	[SchemeSel]  = { "#eeeeee", "#2E3440", "#88c0d0" },
 };
 
@@ -23,7 +23,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Google-chrome",  NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
 /* layout(s) */
@@ -92,6 +92,12 @@ static Key keys[] = {
 
 	{ 0,				XK_Print,	spawn,		SHCMD("import -window root Pictures/screen_`date +%Y-%b-%d_%I:%M:%S_%p`.png") },
 	{ MODKEY,                       XK_Print,       spawn,          SHCMD("import Pictures/sel_`date +%Y-%b-%d_%I:%M:%S_%p`.png") },
+
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("amixer set Master 2.5%+") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("amixer set Master 2.5%-") },
+
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight +5%") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -5%") },
 };
 
 /* button definitions */
