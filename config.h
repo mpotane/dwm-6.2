@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", 
-	                                "Hasklug Nerd Font:pixelsize=13:antialias=true:autohint=true" };
+	                                "Hasklug Nerd Font:pixelsize=14:antialias=true:autohint=true" };
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { "#bbbbbb", "#39516f", "#9e5177" },
@@ -24,7 +24,7 @@ static const Rule rules[] = {
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",           NULL,       NULL,       0,            1,           -1 },
-	{ "Google-chrome",  NULL,       NULL,       1 << 1,       1,           -1 },
+	{ "Firefox",        NULL,       NULL,       1 << 1,       1,           -1 },
 	{ "feh",            NULL,       NULL,       0,            1,           -1 },
 };
 
