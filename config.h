@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", 
-	                                "Hasklug Nerd Font:pixelsize=14:antialias=true:autohint=true" };
+	                                "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true" };
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { "#bbbbbb", "#39516f", "#9e5177" },
@@ -53,7 +53,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", " ", "-nb", "#282a36", "-sb", "#854ee4", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-p", " ", "-nb", "#282a36", "-sb", "#39516f", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
